@@ -34,8 +34,10 @@
             </ul>
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
-                    <a href="javascript:;">
-                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    <a href="javascript:;" class="userinfo">
+                        <img style="display: none;" src="http://t.cn/RCzsdCq" class="layui-nav-img">
+
+                        <span class="text-avater">M</span>
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
@@ -44,21 +46,33 @@
                         <dd><a href="">更换头像</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">
+                <li class="layui-nav-item">
+                    <a id="logout" href="javascript:;">
                         <span class="iconfont icon-tuichu"></span>
                         退出登录
-                    </a></li>
+                    </a>
+                </li>
             </ul>
         </div>
 
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
+                <div>
+                    <a href="javascript:;" class="userinfo" style="color: white;">
+                        <img style="display: none;" src="http://t.cn/RCzsdCq" class="layui-nav-img" id="userPic">
+
+                        <span class="text-avater">M</span>
+                        欢迎 <span class="username"></span>
+                    </a>
+                </div>
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="test">
-                    <li class="layui-nav-item"><a href="">
+                    <li class="layui-nav-item layui-this">
+                        <a href="/home/dashboard.html" target="fm">
                             <span class="iconfont icon-home"></span>
                             首页
-                        </a></li>
+                        </a>
+                    </li>
                     <li class="layui-nav-item layui-nav-itemed">
                         <a class="" href="javascript:;">
                             <span class="iconfont icon-16"></span>
@@ -88,7 +102,7 @@
                     <li class="layui-nav-item">
                         <a href="javascript:;">
                             <span class="iconfont icon-user"></span>
-                            个人中心
+                            欢迎 <span id="username"></span>
                         </a>
                         <dl class="layui-nav-child">
                             <dd>
@@ -115,13 +129,11 @@
             </div>
         </div>
 
-        <div class="layui-body">
+        <div class="layui-body" style="overflow: hidden;">
             <!-- 内容主体区域 -->
-            <div style="padding: 15px;">
-            <iframe src="" frameborder="0">
-                
+            <iframe name="fm" src="/home/dashboard.html" frameborder="0" style="width: 100%;height: 100%;">
+
             </iframe>
-            </div>
         </div>
 
         <div class="layui-footer">
@@ -133,6 +145,7 @@
 
     <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/js/baseApi.js"></script>
     <script src="/assets/js/index.js"></script>
 
 </body>

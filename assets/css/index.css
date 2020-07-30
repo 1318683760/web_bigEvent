@@ -8,3 +8,14 @@
 .layui-icon-app{
     margin: 0 10px 0 20px;
 }
+
+/* 文字头像 */
+.userinfo .text-avater{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        background-color: #009688;
+}
