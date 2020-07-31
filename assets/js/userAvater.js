@@ -43,7 +43,9 @@ $(function () {
         $.ajax({
             type: 'post',
             url: '/my/update/avatar',
-            data: dataURL,
+            data: {
+                avatar: dataURL
+            },
             success: function (res) {
                 if (res.status != 0) return layer.msg('图片上传失败，请重新上传');
                 layer.msg('图片上传成功');
