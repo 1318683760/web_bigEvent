@@ -32,7 +32,7 @@ function getUserInfo() {
             renderAvatar(res.data);
         },
         complete: function (res) {
-            console.log(res);
+            // console.log(res);
             // 未登录访问index拦截
             if (res.responseJSON.status == 1) {
                 localStorage.removeItem('toke');
